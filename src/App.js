@@ -1,22 +1,15 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import logo from './logo.jpeg'; 
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
+    <div className="App" >
+      <header className="App-header" style={{backgroundColor:"rgb(10, 0, 26)"}}>
+        <img src={logo}  alt="logo" />
+        <p style={{color: "#0b9da9", fontWeight:"bold"}}>
+          Welcome to Cafe Compass!
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
     </div>
   );
