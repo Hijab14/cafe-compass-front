@@ -1,0 +1,29 @@
+.navbar {
+    background-color: black;
+    height: 70px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-brand {
+    margin-right: auto; /* Pushes the brand logo and text to the left */
+  }
+  
+  .nav-link {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .navbar-buttons {
+    display: flex; /* Make the buttons display flex */
+    align-items: center;
+  }
+  
+  .navbar-buttons li {
+    margin-left: 15px; /* Adjust the spacing between buttons */
+  }
+  
+  .cart-icon {
+    margin-left: 15px; /* Adjust the spacing between buttons and cart icon */
+  }
+  
