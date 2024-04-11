@@ -3,10 +3,11 @@
     height: 70px;
     display: flex;
     align-items: center;
+    justify-content: space-between; /* Align items horizontally with space between */
   }
   
   .navbar-brand {
-    margin-right: auto; /* Pushes the brand logo and text to the left */
+    margin-left: 10px; /* Adjust the margin for the brand logo */
   }
   
   .nav-link {
@@ -15,15 +16,16 @@
   }
   
   .navbar-buttons {
-    display: flex; /* Make the buttons display flex */
+    display: flex;
     align-items: center;
+    margin-right: 10px; /* Adjust margin for the buttons */
   }
   
   .navbar-buttons li {
-    margin-left: 15px; /* Adjust the spacing between buttons */
+    margin-left: 15px;
   }
   
   .cart-icon {
-    margin-left: 15px; /* Adjust the spacing between buttons and cart icon */
+    margin-left: 15px;
   }
   

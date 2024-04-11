@@ -7,6 +7,7 @@ import Navbar from './components/Navbar';
 import OrderHistory from './pages/OrderHistory';
 import Footer from './components/Footer';
 import ContactUs from './pages/ContactUs';
+<<<<<<< Updated upstream
 import LogIn from './pages/LogIn';
 
 function Main() {
@@ -28,11 +29,33 @@ function Main() {
   );
 }
 
+=======
+import CheckOut from './pages/checkOut';
+import FoodState from './foodcontext/FoodState';
+>>>>>>> Stashed changes
 function App() {
   return (
+    <FoodState>
     <Router>
+<<<<<<< Updated upstream
       <Main />
+=======
+      <div className="App page-wrapper">
+        <Navbar />
+        <div className="main-content">
+          <Routes>
+            <Route exact path="/" element={<Search />} />
+            <Route exact path="/history" element={<OrderHistory />} />
+            <Route exact path="/faqs" element={<ContactUs />} />
+            <Route exact path="/checkOut" element={<CheckOut />} />
+
+          </Routes>
+        </div>
+        <Footer />
+      </div>
+>>>>>>> Stashed changes
     </Router>
+    </FoodState>
   );
 }
 

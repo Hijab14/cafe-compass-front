@@ -1,20 +1,20 @@
 import React from 'react';
-// import { useDispatch, useSelector } from 'react-redux'
-
+import { useDispatch, useSelector } from 'react-redux'
+import { actionCreators } from '../../state';
 const Index = (props) => {
   const { item } = props;
 
   const { name, description, price, imageUrl } = item;
-  // const dispatch = useDispatch()
-  // const existingItem = useSelector(state => state.items.find(i => i.name === item.name));
-  // const handleAddToCart = () => {
-  //       if(existingItem){
-  //           dispatch(actionCreators.updateitem(existingItem));
+  const dispatch = useDispatch()
+  const existingItem = useSelector(state => state.items.find(i => i.name === item.name));
+  const handleAddToCart = () => {
+        if(existingItem){
+            dispatch(actionCreators.updateitem(existingItem));
     
-  //       }else{
-  //         dispatch(actionCreators.additem(item));
-  //       }
-  // }
+        }else{
+          dispatch(actionCreators.additem(item));
+        }
+  }
   
   return (
     <div className="card">
@@ -30,7 +30,7 @@ const Index = (props) => {
         <p className="card-text">
           <strong>Price: Rs.{price}</strong>
         </p>
-        <button className="btn btn-success" style={{ backgroundColor: '#0f9ea7' }}>
+        <button className="btn btn-success" onClick={() => handleAddToCart()} style={{ backgroundColor: '#0f9ea7' }}>
           Add to Cart
         </button>
       </div>
