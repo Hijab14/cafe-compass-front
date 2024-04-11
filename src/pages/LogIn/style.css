@@ -1,0 +1,115 @@
+/* style.css */
+.login-page {
+    display: flex;
+    flex-direction: column;
+  }
+
+.local-navbar {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Add this line to vertically center the items */
+    margin: 0;
+    height: 80px; /* Add height to the navbar */
+}
+
+
+.local-navbar p{
+    display: flex;
+    color: white;
+    font-size: 26px;
+    text-align: center;
+    margin: 0;
+
+}
+
+.login-part {
+    display: flex;
+    height: 50vh;
+    background-size: cover; /* Make the background image cover the entire div */
+    background-position: center; /* Center the background image */
+}
+
+.login-part img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.column {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.5); /* Add a semi-transparent white background to the columns */
+}
+
+.column img {
+    height: 330px;
+    object-fit: contain;
+}
+
+.about-us {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+/* style.css */
+.about-us-wrapper {
+    border: 2px solid black;
+    margin: 10px 120px;
+    bottom: 10px;
+    flex: 1;
+}
+
+.form-container {
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent grey background */
+    margin: 30px 10px; /* 30px vertical margin and 10px horizontal margin */
+    padding: 20px; /* Padding inside the form container */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* Make the form elements span the width of the form container */
+    width: 400px;
+}
+  
+.form-container label {
+    display: flex;
+    justify-content: space-between; /* Align the text and the input on opposite sides */
+    margin-bottom: 10px; /* Add some space between the form elements */
+    color: white; /* White text */
+}
+  
+.form-container input,
+.form-container select {
+    background-color: lightgrey; /* Light grey background */
+    border: none; /* Remove the border */
+    width: 55%; /* Set the width of the input */
+    height: 10%;
+}
+  
+.form-container button {
+    background-color: #0f9ea7; /* Teal background */
+    color: white; /* White text */
+    padding: 0px; /* Add some padding */
+    width: 30%; /* Set the width of the button */
+    margin-top: 5px; /* Add some space above the buttons */
+    cursor: pointer; /* Change the cursor when hovering over the buttons */
+    border: none; /* Remove the border */
+    transition: background-color 0.3s, color 0.3s; /* Add a smooth transition effect to the buttons */
+}
+  
+.form-container button:hover {
+    background-color: white; /* Darken the background color when hovering over the buttons */
+    color: #0f9ea7; /* Change the text color when hovering over the buttons */
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
