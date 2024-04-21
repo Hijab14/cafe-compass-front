@@ -1,0 +1,29 @@
+.navbar {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 12vh;
+    z-index: 1000;
+  }
+  .navbar .restaurant-name {
+    margin-left: 30px;
+    margin-top: -5px;
+    font-size: 25px;
+  }
+  .navbar .profile i {
+    font-size: 62px;
+    cursor: pointer;
+  }
+  .logo img {
+    width: 70px;
+    margin-top: -5px;
+    margin-right: -5px; 
+  }
+  
