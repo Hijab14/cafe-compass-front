@@ -55,10 +55,11 @@ function LogIn() {
                 </div>
             </div>
         </div>
-        <div className="about-us-wrapper">
-            <div className="about-us">
+        <div className="about-us-wrapper"style={{marginTop:'40px', marginBottom:'45px'}}>
+            <div className="about-us" >
                 <h2>About Us!</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris.</p>
+                <p>Welcome to Cafe Compass, the go-to platform for students seeking the ultimate convenience in campus dining. Designed specifically for the bustling student lifestyle, Cafe Compass offers a user-friendly interface that allows students to effortlessly search for cafes on campus, apply filters for dietary preferences, budget, or proximity, and place orders ahead of time. Whether you're dashing between classes, planning a meal with friends, or just in need of a quick coffee fix, Cafe Compass streamlines your dining experience, making it easier than ever to find and enjoy the best culinary options your university has to offer. With Cafe Compass, every meal is just a click away, perfectly tailored to fit into your busy academic schedule.</p>
+           <p>At Cafe Compass, we understand that every student’s schedule and dietary needs are unique. That’s why we've developed a robust platform that not only allows you to search for cafes on campus but also lets you apply filters tailored to your dietary preferences, budget, and location needs. Whether you're in a rush between classes, planning a leisurely meal with friends, or just looking for a quick coffee boost, Cafe Compass is here to help you make the best dining choices quickly and efficiently.</p>
             </div>
         </div>
     </div>

@@ -68,7 +68,7 @@ function AdminProducts() {
   }, []);
 
   return (
-    <div className="admin-products-page">
+    <div className="admin-products-page" style={{marginTop:'90px'}}>
       <AdminNavbar restaurantName="Your Restaurant Name" />
       {/* <h1>Admin Products</h1> */}
       {products.map(product => <ProductCard key={product.id} product={product} />)}

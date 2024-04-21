@@ -53,7 +53,7 @@ function AdminOrder() {
   }, []);
 
   return (
-    <div className="admin-orders-page">
+    <div className="admin-orders-page"style={{marginTop:'90px'}}>
       <AdminNavbar restaurantName="Your Restaurant Name" />
       <h1>Admin Orders</h1>
       <div className="orders-scroll-container">

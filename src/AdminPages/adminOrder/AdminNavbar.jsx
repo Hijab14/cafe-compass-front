@@ -6,22 +6,24 @@ import { Link } from 'react-router-dom';
 
 function AdminNavbar({ restaurantName }) {
   return (
-    <nav className="navbar">
+    <nav className="navbar navbar-expand-lg navbar-light" style={{ backgroundColor: "black", height: "80px", display: "flex", alignItems: "center" }}>
       <div className="logo">
         <img src={logo} alt="Cafe-compass logo here" />
       </div>
-      <div className="restaurant-name">
+      <div className="restaurant-name" style={{color:'black'}}>
         {restaurantName} 
       </div>
 
       <li className="nav-item" style={{ marginRight: "15px" }}>
             <Link className="nav-link" style={{ color: "white", fontSize: "18px", textDecoration: "none" }} to="/adminproducts">Products</Link>
           </li>
+          <li className="nav-item" style={{ marginRight: "15px" }}>
+            <Link className="nav-link" style={{ color: "white", fontSize: "18px", textDecoration: "none" }} to="/adminorders">Orders</Link>
+          </li>
+          <li className="nav-item" style={{ marginRight: "15px" }}>
+            <Link className="nav-link" style={{ color: "white", fontSize: "18px", textDecoration: "none" }} to="/">LogOut</Link>
+          </li>
 
-       
-      <div className="profile">
-        <i className='bx bx-user-circle'></i>
-      </div>
     </nav>
   );
 }

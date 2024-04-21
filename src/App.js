@@ -34,11 +34,13 @@ function MainContent() {
           {/* {(location.pathname !== '/') && <Navbar />} */}
           <div className="main-content">
             <Routes>
+            <Route exact path="/" element={<LogIn />} />
+
               <Route path="/adminorders" element={<AdminOrder />} />
               <Route path="/adminProducts" element={<AdminProducts />} />
             </Routes>
           </div>
-          {(location.pathname !== '/') && <Footer />}
+          {/* {(location.pathname !== '/') && <Footer />} */}
         </>
 
         </>
@@ -55,7 +57,7 @@ function MainContent() {
            
             </Routes>
           </div>
-          {(location.pathname !== '/') && <Footer />}
+          {/* {(location.pathname !== '/') && <Footer />} */}
         </>
       )}
     </div>
@@ -69,6 +71,7 @@ function App() {
       <FoodState>
         <Router>
           <MainContent />
+          <Footer/>
         </Router>
       </FoodState>
     </AuthProvider>
