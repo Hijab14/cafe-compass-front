@@ -7,39 +7,12 @@ import Navbar from './components/Navbar';
 import OrderHistory from './pages/OrderHistory';
 import Footer from './components/Footer';
 import ContactUs from './pages/ContactUs';
-<<<<<<< Updated upstream
-import LogIn from './pages/LogIn';
-
-function Main() {
-  const location = useLocation();
-
-  return (
-    <div className="App page-wrapper">
-      {location.pathname !== '/' && <Navbar />}
-      <div className="main-content">
-        <Routes>
-          <Route exact path="/" element={<LogIn />} />
-          <Route path="/search" element={<Search />} />
-          <Route path="/history" element={<OrderHistory />} />
-          <Route path="/faqs" element={<ContactUs />} />
-        </Routes>
-      </div>
-      <Footer />
-    </div>
-  );
-}
-
-=======
 import CheckOut from './pages/checkOut';
 import FoodState from './foodcontext/FoodState';
->>>>>>> Stashed changes
 function App() {
   return (
     <FoodState>
     <Router>
-<<<<<<< Updated upstream
-      <Main />
-=======
       <div className="App page-wrapper">
         <Navbar />
         <div className="main-content">
@@ -53,7 +26,6 @@ function App() {
         </div>
         <Footer />
       </div>
->>>>>>> Stashed changes
     </Router>
     </FoodState>
   );

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
-const SearchBar = () => {
+const SearchBar = ({ onLocationChange,onCategoryChange, onPriceChange }) => {
   const [searchQuery, setSearchQuery] = useState('');
   const [location, setLocation] = useState('');
   const [category, setCategory] = useState('');
@@ -13,15 +13,19 @@ const SearchBar = () => {
   };
 
   const handleLocationChange = (e) => {
-    setLocation(e.target.value);
+    const newLocation = e.target.value;
+    setLocation(newLocation);
+    onLocationChange(newLocation); // Call the callback function with the new location
   };
 
   const handleCategoryChange = (e) => {
+    const newCategory = e.target.value;
     setCategory(e.target.value);
+    onCategoryChange(newCategory); 
   };
 
   const handlePriceChange = () => {
-    setPriceChecked(!priceChecked);
+    onPriceChange(); 
   };
 
   const handleSearchSubmit = (e) => {
@@ -32,6 +36,7 @@ const SearchBar = () => {
     console.log('Category:', category);
     console.log('Price Checked:', priceChecked);
   };
+  
 
   return (
     <div className="container mt-3">
@@ -54,21 +59,22 @@ const SearchBar = () => {
         <div className="form-group mr-3">
           <select className="form-control" value={location} onChange={handleLocationChange}>
             <option value="">Location</option>
-            {/* Add location options here */}
+            <option value="Ground floor">Ground</option>
+            <option value="4th Floor">Fourth</option>
+            <option value="Lower Ground Floor">Lower Ground</option>
           </select>
         </div>
 
         <div className="form-group mr-3">
-          <select className="form-control" value={category} onChange={handleCategoryChange}>
+          <select className="form-control" value={location} onChange={handleCategoryChange}>
             <option value="">Category</option>
-            {/* Add category options here */}
+            <option value="Sweet">Sweet</option>
+            <option value="Savory">Savory</option>
+            <option value="Drink">Drink</option>
           </select>
         </div>
         <div className="form-group mr-3">
-          <select className="form-control" value={category} onChange={handleCategoryChange}>
-            <option value="">Price</option>
-            {/* Add category options here */}
-          </select>
+          <button type="button" className="btn btn-primary" onClick={handlePriceChange}>Price Sort</button>
         </div>
       </form>
 

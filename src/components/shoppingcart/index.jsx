@@ -10,9 +10,11 @@ const Index = () => {
   const getTotalPrice = () => {
     let total = 0;
     cartItems.forEach(item => {
-      total += item.price*item.quantity;
+        total += item.price*item.quantity;
+        console.log( total);
+
     });
-    return total.toFixed(2);
+    return total;
   };
 
   const handleRemove = (item) => {
@@ -40,7 +42,7 @@ const Index = () => {
               {cartItems.map((item) => (
                 <tr>
                   <td>{item.name}</td>
-                  <td>${item.price}</td>
+                  <td>Rs. {item.price}</td>
                   <td>{item.quantity}</td>
                   <td>
                   <button type="button" class="btn btn-warning" onClick={()=>handleRemove(item)}>-</button>
@@ -50,7 +52,7 @@ const Index = () => {
             </tbody>
           </table>
           <div className="text-right">
-            <strong>Total Price: ${getTotalPrice()}</strong>
+            <strong>Total Price: Rs. {getTotalPrice()}</strong>
           </div>
         </div>
         <div className="card-footer text-right">
