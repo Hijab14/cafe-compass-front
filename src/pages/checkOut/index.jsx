@@ -22,7 +22,7 @@ function Index() {
           type="submit"
           href="/"
           style={{backgroundColor:'#0f9ea7', color:'white'}}
-          onClick={() => putorder(email,cartItems)}
+        //   onClick={() => putorder(email,cartItems)}
         >
           Confirm Order
         </button>

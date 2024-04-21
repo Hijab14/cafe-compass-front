@@ -1,5 +1,5 @@
 .admin-products-page {
-    padding-top: 12vh;  /* Add a top padding equal to the height of the navbar */
+    padding-top: 0;  /* Add a top padding equal to the height of the navbar */
   }
 
   .product-card {

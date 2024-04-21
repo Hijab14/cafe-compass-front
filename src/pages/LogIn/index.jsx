@@ -3,18 +3,20 @@ import React, { useState } from 'react';
 import './style.css';
 import logInpagebg from '../../assets/logInpagebg.png';
 import logo from '../../assets/logo-2.png'; // Import the logo
+import { useAuth } from '../../contexts/AuthContext';
+import { useNavigate } from 'react-router-dom';
 
 function LogIn() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [userType, setUserType] = useState(''); // Add a new state for the user type
+  const [userType, setUserType] = useState('');
+  const { login } = useAuth();
+  const navigate = useNavigate();
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log('Username:', username);
-    console.log('Password:', password);
-    console.log('User Type:', userType); // Log the user type
-    // Here you can add your logic to send these values to your server
+    login({ username, userType });
+    navigate(userType === 'admin' ? '/adminorders' : '/search');
   };
 
   return (

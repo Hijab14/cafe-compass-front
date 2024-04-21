@@ -58,7 +58,7 @@ const Navbar = () => {
 
   return (
     <nav className="navbar navbar-expand-lg navbar-light" style={{ backgroundColor: "black", height: "80px", display: "flex", alignItems: "center" }}>
-      <Link className="navbar-brand" to="/">
+      <Link className="navbar-brand">
         <img src={logo} width="80" height="70" style={{marginLeft:"10px"}}alt="" />
       </Link>
       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -67,7 +67,7 @@ const Navbar = () => {
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav ml-auto" style={{ display: "flex", alignItems: "center", paddingRight: "20px", listStyle: "none" }}>
           <li className="nav-item" style={{ marginRight: "15px" }}>
-            <Link className="nav-link" to="/" style={{ color: "white", fontSize: "18px", textDecoration: "none" }}>Home</Link>
+            <Link className="nav-link" to="/search" style={{ color: "white", fontSize: "18px", textDecoration: "none" }}>Home</Link>
           </li>
           <li className="nav-item" style={{ marginRight: "15px" }}>
             <Link className="nav-link" to='/history' style={{ color: "white", fontSize: "18px", textDecoration: "none" }}>Order History</Link>
@@ -76,7 +76,7 @@ const Navbar = () => {
             <Link className="nav-link" style={{ color: "white", fontSize: "18px", textDecoration: "none" }} to="/faqs">Contact Us</Link>
           </li>
           <li className="nav-item" style={{ marginRight: "15px" }}>
-            <Link className="nav-link" style={{ color: "white", fontSize: "18px", textDecoration: "none" }} to="/newcontact">Log Out</Link>
+            <Link className="nav-link" style={{ color: "white", fontSize: "18px", textDecoration: "none" }} to="/">Log Out</Link>
           </li>
         </ul>
       </div>
