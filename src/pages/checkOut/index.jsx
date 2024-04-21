@@ -1,5 +1,5 @@
 import React from "react";
-import OrderDetails from '/Users/hijabfatima/Documents/SE/cafe-compass-front/src/components/OrderDetails'
+import OrderDetails from '../../components/OrderDetails'
 import { useState } from "react";
 import { useSelector } from "react-redux";
 
