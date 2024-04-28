@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
-import OrderDetails from '/Users/hijabfatima/Documents/SE/cafe-compass-front/src/components/OrderDetails';
+import React from "react";
+import OrderDetails from '../../components/OrderDetails'
+import { useState } from "react";
+import { useSelector } from "react-redux";
 
 function Index() {
   const Items = useSelector((state) => state.items);

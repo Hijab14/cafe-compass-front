@@ -1,7 +1,7 @@
 // src/components/ShoppingCart.js
 import React from 'react';
 import { useSelector,useDispatch } from 'react-redux'
-import { actionCreators } from '/Users/hijabfatima/Documents/SE/cafe-compass-front/src/state'
+import { actionCreators } from '../../state/'
 import { Link } from 'react-router-dom';
 
 const Index = () => {
