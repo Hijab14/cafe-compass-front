@@ -24,22 +24,38 @@ const Index = () => {
     getItems(); // Fetch all items initially
   }, []);
 
+  const handleSearch = (searchQuery) => {
+    if (!searchQuery) {
+      // If no search query is provided, display all items
+      setFilteredItems(menuItems);
+    } else {
+      // Filter items based on the search query
+      const filtered = menuItems.filter(item => item.productName.toLowerCase().includes(searchQuery.toLowerCase()));
+      setFilteredItems(filtered);
+    }
+  };
+  
+  
   const handleLocationChange = (location) => {
     if (!location) {
       // If no location is selected, display all items
       setFilteredItems(menuItems);
     } else {
       // Filter items based on the selected location
-      const filtered = menuItems.filter(item => item.location === location);
+      const filtered = filteredItems.filter(item => item.location === location);
       setFilteredItems(filtered);
     }
   };
 
   const handleCategoryChange = (category) => {
+    if (!category) {
+      // If no location is selected, display all items
+      setFilteredItems(menuItems);
+    } else {
     // Filter items based on the selected category
-    const filtered = category ? menuItems.filter(item => item.category === category) : menuItems;
+    const filtered = category ? filteredItems.filter(item => item.category === category) : menuItems;
     setFilteredItems(filtered);
-  };
+  }};
 
   const handlePriceChange = () => {
     // Sort items based on price if the checkbox is checked
@@ -54,7 +70,8 @@ const Index = () => {
       </h1>
       <SearchBar  onLocationChange={handleLocationChange} 
         onCategoryChange={handleCategoryChange} 
-        onPriceChange={handlePriceChange} />
+        onPriceChange={handlePriceChange} 
+        onSearchChange={handleSearch}/>
       <div className="container my-3">
         <div className="row">
           {filteredItems.map((item, index) => (

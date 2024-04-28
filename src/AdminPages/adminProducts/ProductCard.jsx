@@ -74,8 +74,7 @@ function ProductCard({ product }) {
       <div className="right-column">
         <h2>{product.name}</h2>
         <p className='desc-p'>{product.description}</p>
-        <p>Price: ${product.price.toFixed(2)}</p>
-        <p>Quantity Available: {product.quantity}</p>
+        <p>{product.price ? `$${product.price.toFixed(2)}` : 'Price not available'}</p>        <p>Quantity Available: {product.quantity}</p>
         <button class="button" onClick={() => setIsEditing(true)}>Edit <i class='bx bx-edit' ></i></button>
       </div>
 

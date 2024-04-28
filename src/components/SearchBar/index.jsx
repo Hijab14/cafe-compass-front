@@ -2,16 +2,18 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
-const SearchBar = ({ onLocationChange,onCategoryChange, onPriceChange }) => {
+const SearchBar = ({ onLocationChange, onCategoryChange, onPriceChange, onSearchChange }) => {
   const [searchQuery, setSearchQuery] = useState('');
   const [location, setLocation] = useState('');
   const [category, setCategory] = useState('');
   const [priceChecked, setPriceChecked] = useState(false);
 
   const handleSearchChange = (e) => {
-    setSearchQuery(e.target.value);
+    const search = e.target.value;
+    setSearchQuery(search);
+    onSearchChange(search);
   };
-
+  
   const handleLocationChange = (e) => {
     const newLocation = e.target.value;
     setLocation(newLocation);
@@ -20,7 +22,7 @@ const SearchBar = ({ onLocationChange,onCategoryChange, onPriceChange }) => {
 
   const handleCategoryChange = (e) => {
     const newCategory = e.target.value;
-    setCategory(e.target.value);
+    setCategory(newCategory);
     onCategoryChange(newCategory); 
   };
 
@@ -36,7 +38,6 @@ const SearchBar = ({ onLocationChange,onCategoryChange, onPriceChange }) => {
     console.log('Category:', category);
     console.log('Price Checked:', priceChecked);
   };
-  
 
   return (
     <div className="container mt-3">
@@ -66,13 +67,14 @@ const SearchBar = ({ onLocationChange,onCategoryChange, onPriceChange }) => {
         </div>
 
         <div className="form-group mr-3">
-          <select className="form-control" value={location} onChange={handleCategoryChange}>
+          <select className="form-control" value={category} onChange={handleCategoryChange}>
             <option value="">Category</option>
             <option value="Sweet">Sweet</option>
             <option value="Savory">Savory</option>
             <option value="Drink">Drink</option>
           </select>
         </div>
+
         <div className="form-group mr-3">
           <button type="button" className="btn btn-primary" onClick={handlePriceChange}>Price Sort</button>
         </div>

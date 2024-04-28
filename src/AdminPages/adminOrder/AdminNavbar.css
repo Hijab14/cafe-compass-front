@@ -1,5 +1,5 @@
-.navbar {
-    display: flex;
+/* .navbar { */
+    /* display: flex;
     justify-content:space-between;
     align-items: center;
     background-color: #333;
@@ -20,7 +20,7 @@
   .navbar .profile i {
     font-size: 62px;
     cursor: pointer;
-  }
+  } */
   .logo img {
     width: 70px;
     margin-top: -5px;

@@ -10,18 +10,14 @@ function AdminNavbar({ restaurantName }) {
       <div className="logo">
         <img src={logo} alt="Cafe-compass logo here" />
       </div>
-      <div className="restaurant-name" style={{color:'black'}}>
-        {restaurantName} 
-      </div>
-
       <li className="nav-item" style={{ marginRight: "15px" }}>
-            <Link className="nav-link" style={{ color: "white", fontSize: "18px", textDecoration: "none" }} to="/adminproducts">Products</Link>
+            <Link className="nav-link" style={{ color: "white", fontSize: "18px",marginLeft:'360px', textDecoration: "none" }} to="/adminproducts">Products</Link>
           </li>
           <li className="nav-item" style={{ marginRight: "15px" }}>
-            <Link className="nav-link" style={{ color: "white", fontSize: "18px", textDecoration: "none" }} to="/adminorders">Orders</Link>
+            <Link className="nav-link" style={{ color: "white", fontSize: "18px",marginLeft:'360px', textDecoration: "none" }} to="/adminorders">Orders</Link>
           </li>
           <li className="nav-item" style={{ marginRight: "15px" }}>
-            <Link className="nav-link" style={{ color: "white", fontSize: "18px", textDecoration: "none" }} to="/">LogOut</Link>
+            <Link className="nav-link" style={{ color: "white", fontSize: "18px",marginLeft:'360px', textDecoration: "none" }} to="/">LogOut</Link>
           </li>
 
     </nav>
